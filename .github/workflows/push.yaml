@@ -3,13 +3,12 @@ name: Push to Replicate
 on:
   # Workflow dispatch allows you to manually trigger the workflow from GitHub.com
   # Go to your repo, click "Actions", click "Push to Replicate", click "Run workflow"
-    workflow_dispatch:
+  workflow_dispatch:
     inputs:
       model_name:
         description: "Model name to push to Replicate website"
         required: true
         default: "justmalhar/meta-llama-3.2-90b-vision-instruct"
-  # # Uncomment these lines to trigger the workflow on every push to the main branch
   push:
     branches:
       - main
