@@ -1,0 +1,11 @@
+build:
+  gpu: true
+  python_version: "3.10"
+  python_packages:
+    - "torch==1.12.1"
+    - "transformers==4.30.0"
+    - "sentencepiece==0.1.97"
+    - "accelerate==0.16.0"
+    - "pillow>=9.0.0,<10.0.0"
+predict: "predict.py:Predictor"
+image: "justmalhar/meta-llama-3.2-90b-vision-instruct"

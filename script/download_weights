@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+import os
+import shutil
+from transformers import MllamaForConditionalGeneration, AutoProcessor
+
+CACHE_DIR = 'weights'
+MODEL_ID = "unsloth/Llama-3.2-90B-Vision-Instruct"
+
+# Clear and recreate the cache directory
+if os.path.exists(CACHE_DIR):
+    shutil.rmtree(CACHE_DIR)
+os.makedirs(CACHE_DIR)
+
+# Download and cache the model
+model = MllamaForConditionalGeneration.from_pretrained(
+    MODEL_ID, 
+    cache_dir=CACHE_DIR,
+    torch_dtype="auto",
+    device_map="auto"
+)
+
+# Download and cache the processor
+processor = MllamaProcessor.from_pretrained(model_name, cache_dir=CACHE_DIR)
+
+print("Model and processor have been downloaded and cached successfully.")
