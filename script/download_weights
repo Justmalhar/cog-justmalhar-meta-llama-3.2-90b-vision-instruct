@@ -4,7 +4,7 @@ import shutil
 from transformers import MllamaForConditionalGeneration, AutoProcessor
 
 CACHE_DIR = 'weights'
-MODEL_ID = "unsloth/Llama-3.2-90B-Vision-Instruct"
+MODEL_ID = "unsloth/Llama-3.2-11B-Vision-Instruct"
 
 # Clear and recreate the cache directory
 if os.path.exists(CACHE_DIR):
