@@ -5,7 +5,7 @@ build:
     - "torch==1.12.1"
     - "transformers==4.45.1"
     - "sentencepiece"
-    - "accelerate==0.16.0"
+    - "accelerate"
     - "pillow>=9.0.0,<10.0.0"
 predict: "predict.py:Predictor"
 image: "justmalhar/meta-llama-3.2-90b-vision-instruct"
