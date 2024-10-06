@@ -30,7 +30,7 @@ class Predictor(BasePredictor):
         max_new_tokens: int = Input(
             description="Maximum number of tokens to generate. A word is generally 2-3 tokens",
             ge=1,
-            default=512
+            default=512)
     ) -> Path:
         """Run a single prediction on the model"""
         image = Image.open(image).convert('RGB')
